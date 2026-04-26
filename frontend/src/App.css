@@ -1,0 +1,100 @@
+.layout {
+  display: flex;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #6366f1, #10b981);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+nav li:hover, nav li.active {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-card .label {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card .value {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.stat-card .value.danger { color: var(--danger); }
+.stat-card .value.warning { color: var(--warning); }
+
+.stat-card .trend {
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.stat-card .trend.positive { color: var(--accent); }
+
+.log-row {
+  display: grid;
+  grid-template-columns: 180px 80px 150px 1fr;
+  gap: 1rem;
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--border);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+}
+
+.log-row:last-child {
+  border-bottom: none;
+}
+
+.level {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.level.info { background: rgba(99, 102, 241, 0.2); color: #818cf8; }
+.level.error { background: rgba(239, 68, 68, 0.2); color: #f87171; }
+.level.warning { background: rgba(245, 158, 11, 0.2); color: #fbbf24; }
+
+.service { color: var(--text-secondary); }
+.message { color: var(--text-primary); }
+h3 { margin-bottom: 1.5rem; }
